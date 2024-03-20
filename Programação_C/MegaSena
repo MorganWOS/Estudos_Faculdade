@@ -1,0 +1,41 @@
+/******************************************************************************
+
+  Wesley De Oliveira Silva
+ 
+  Cartão Mega Sena
+
+*******************************************************************************/
+#include <stdio.h>
+#include <conio.h>
+#include <stdlib.h>
+#include<time.h>
+
+int main()
+{
+
+  srand(time(NULL));
+ 
+    int palpite, num;
+    
+    printf("Quantos números pretende gerar?: ");
+    scanf("%d", &num);
+    if(num<6 || num>15){
+        printf("Digite um número entre 6 e 15");
+    }
+    else{
+        int cartao[num];
+   
+        for (int i=0; i< num; i++) {
+            palpite= rand()%60 + 1;
+            cartao[i] = palpite;
+        }
+
+        printf ("Seus %d números da sorte na Mega Sena são: \n\n", num);
+        for (int i=0; i< num; i++) {
+            printf ("%d - ", cartao[i]);
+    }
+    }
+
+    return 0;
+       
+    }
