@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" href="Tarefa_5_04.css">
+</head>
+<body>
+    <div class="login-container">
+        <form id="loginForm">
+            <input type="email" id="emailField" placeholder="Digite aqui o seu email" required>
+            <div class="button-container">
+                <button type="button" class="login-button" style="width: calc(75% - 4px);" onclick="showEmail()">Login</button>
+                <button type="button" class="login-button reset-button" style="width: calc(25% - 4px);" onclick="resetForm()">Reset</button>
+            </div>
+        </form>
+    </div>
+    <script>
+        function showEmail() {
+            const emailField = document.getElementById("emailField");
+            alert(`O e-mail digitado é: ${emailField.value}`);
+        }
+
+        function resetForm() {
+            document.getElementById("loginForm").reset();
+        }
+    </script>
+</body>
+</html>
